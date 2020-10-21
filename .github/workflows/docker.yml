@@ -13,8 +13,8 @@ jobs:
       -
         name: build and test
         run: |
-          docker build -t openshift-academia-online/spring-petclinic:2.0 --no-cache .
-          docker run -d -p 80:8080 openshift-academia-online/spring-petclinic:2.0
+          docker build -t openshiftacademiaonline/spring-petclinic-dev:2.0-testing --no-cache .
+          docker run -d -p 80:8080 openshiftacademiaonline/spring-petclinic-dev:2.0-testing
           while true
             do
               sleep 1
