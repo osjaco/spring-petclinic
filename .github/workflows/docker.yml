@@ -2,7 +2,7 @@ name: docker
 on:
   push:
     branches:
-      - dev
+      - v2.0
 jobs:
   test:
     runs-on: ubuntu-18.04      
@@ -13,8 +13,8 @@ jobs:
       -
         name: build and test
         run: |
-          docker build -t openshift-academia-online/spring-petclinic:testing --no-cache .
-          docker run -d -p 80:8080 openshift-academia-online/spring-petclinic:testing
+          docker build -t openshift-academia-online/spring-petclinic:2.0 --no-cache .
+          docker run -d -p 80:8080 openshift-academia-online/spring-petclinic:2.0
           while true
             do
               sleep 1
